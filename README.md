@@ -44,12 +44,13 @@ Para executar a avaliação do modelo comercial em nuvem, exporte a sua chave de
 
 ```bash
 export GEMINI_API_KEY="SUA_CHAVE_DE_API_AQUI"
-python3 scripts/benchmark-naev-qa.py --real --model --gemini-model gemini-3.1-flash-lite --runs 3
+python3 benchmark-naev-qa.py --real --model gemini --runs 3 --gemini-model gemini-3.1-flash-lite
+
 ```
 
 **Saídas geradas:** Ao final das execuções, o script salva os dados brutos nos arquivos ```benchmark_results_faults.json``` e os resumos estatísticos em ```benchmark_summary_faults.csv```.
 
-### 3. Geração dos gráficos (```generate_all_tcc_charts.py```)
+### 3. Geração dos gráficos (```generate_all_charts.py```)
 Para processar os dados dos arquivos CSV e gerar as 3 figuras comparativas em altíssima resolução (300 DPI), execute:
 
 ```bash
